@@ -1,0 +1,11 @@
+{
+  "short_name": "Bindu",
+  "name": "Bindu Varsha",
+  "icons": [
+    {
+      "src": "logo.png",
+      "type": "image/png",
+      "sizes": "225x225"
+    }
+  ]
+}
