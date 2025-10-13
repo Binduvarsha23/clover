@@ -1,11 +1,19 @@
 {
   "short_name": "Bindu",
   "name": "Bindu Varsha",
+  "start_url": "/",
+  "theme_color": "#0047AB",
+  "display": "standalone",
   "icons": [
     {
       "src": "logo.png",
       "type": "image/png",
-      "sizes": "225x225"
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ]
 }
