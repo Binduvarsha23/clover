@@ -1,26 +1,18 @@
 .group-create
   height: 100%
   flex-grow: 1
-  border-right: 1px solid #7CA9E6
+  border-right: 1px solid rgba(218, 220, 224, 0.5)
   display: flex
   flex-direction: column
-  background: #7CA9E6
-  color: #ffffff
-
   .notice
     font-size: 12px
-    color: #f7faff
+    color: #666
     text-align: center
     padding: 18px
-
   .rooms
     flex-grow: 1
-    overflow-y: auto
+    overflow-y: scroll
     -webkit-overflow-scrolling: touch
-    scrollbar-width: none
-
-  .rooms::-webkit-scrollbar
-    display: none
 
 @media screen and (min-width: 1200px)
   .group-create
@@ -37,35 +29,31 @@
     width: 100%
 
 .theme.light .group-create
-  background: #E8F0FF
-  color: #003a91
-  border-right: 1px solid rgba(0, 58, 145, 0.2)
+  background: #0047AB
 
 .theme.dark .group-create
-  background: #3A75C4
-  color: #ffffff
-  border-right: 1px solid rgba(255, 255, 255, 0.2)
+  background: #303841
 
 .active
-  color: #ffffff !important
-  font-weight: 700
+  color: #da7d02 !important
 
 .selection-text
   text-align: center
   padding: 12px
   font-size: 14px
-  background: #5F91D8
-  color: #ffffff
-  border-radius: 6px
-  margin: 8px 0
+  background: #f7f7f8
+  color: #666
 
 .selection-text.error
-  background: #FFE3C4
   color: #DA7D02
-  font-weight: 600
 
 .create-button
-  background: #ffffff
+  background: #DA7D02
+  width: 100%
+
+.create-button:hover
+  background: #DA7D02
+  opacity: 0.9  background: #ffffff
   color: #5F91D8
   width: 100%
   padding: 10px 0
