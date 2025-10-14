@@ -2,8 +2,8 @@
   width: 100%
   height: 100%
   overflow-y: scroll
-  background-color: #0047AB    
-  color: #ffffff              
+  background-color: #0047AB
+  color: #ffffff
 
   .data-create
     position: relative
@@ -16,8 +16,8 @@
 
     button
       margin: 10px
-      background-color: #ffffff    
-      color: #0047AB              
+      background-color: #ffffff
+      color: #0047AB
       border: 2px solid #ffffff
       padding: 8px 16px
       border-radius: 6px
@@ -44,19 +44,27 @@
 
   .separator
     padding: 10px 0
-    color: #d9e4ff   
+    color: #ffffff
 
   .delete
-    color: #ffb3b3
+    color: #ffffff
     padding: 10px 0
     cursor: pointer
 
 .admin
   .search-bar
-    background: #0047AB
-    border: 2px solid #ffffff
+    background: #ffffff
+    border: 2px solid #0047AB
     border-radius: 6px
     padding: 8px 12px
-    color: #ffffff
+    color: #0047AB
     width: 100%
     outline: none
+    font-weight: 600
+    transition: all 0.3s ease
+
+    &::placeholder
+      color: #7aa3e5
+
+    &:focus
+      box-shadow: 0 0 6px #ffffff
