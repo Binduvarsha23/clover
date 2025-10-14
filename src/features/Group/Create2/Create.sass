@@ -9,6 +9,189 @@
 
   .picture
     left: 50%
+    transform: translate(-50%, 0)
+    position: relative
+    width: 150px
+    cursor: pointer
+
+    .img
+      display: flex
+      width: 150px
+      height: 150px
+      border-radius: 75px
+      justify-content: center
+      align-items: center
+      background: #ffffff
+      color: #0047AB
+      font-size: 50px
+
+    img
+      width: 150px
+      height: 150px
+      border-radius: 75px
+
+    .overlay
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      width: 100%
+      height: 100%
+      opacity: 0
+      background: #000000
+      border-radius: 150px
+
+  .picture:hover .overlay
+    opacity: 0.7
+
+    .text
+      color: #ffffff
+      font-size: 30px
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      text-align: center
+
+  input.group-name
+    background: #ffffff
+    border: 1px solid #0047AB
+    border-radius: 25px
+    min-height: 40px
+    height: 40px
+    padding: 0 20px
+    margin: 15px 10px 6px 10px
+    color: #0047AB
+    font-size: 15px
+    flex-shrink: 0
+    box-shadow: none
+
+  input.group-name:focus
+    box-shadow: none
+    outline-width: 0
+
+@media screen and (min-width: 1200px)
+  .group-create
+    max-width: 360px
+    min-width: 360px
+
+@media screen and (min-width: 700px) and (max-width: 1199px)
+  .group-create
+    max-width: 300px
+    min-width: 300px
+
+@media screen and (max-width: 699px)
+  .group-create
+    width: 100%
+
+.theme.light .group-create
+  background: #0047AB
+  color: #ffffff
+
+.theme.dark .group-create
+  background: #303841
+  color: #ffffff
+
+.active
+  color: #da7d02 !important
+  font-weight: 700
+
+.selection-text
+  text-align: center
+  padding: 12px
+  font-size: 14px
+  background: #f7f7f8
+  color: #666
+
+.selection-text.error
+  color: #DA7D02
+
+.create-button
+  background: #DA7D02
+  width: 100%
+  padding: 10px 0
+  border-radius: 6px
+  font-weight: 600
+  cursor: pointer
+  transition: all 0.3s ease
+  color: #ffffff
+
+  &:hover
+    background: #da7d02
+    opacity: 0.9    border-radius: 25px
+    min-height: 40px
+    height: 40px
+    padding: 0 20px
+    margin: 15px 10px 6px 10px
+    color: #0047AB
+    font-size: 15px
+    flex-shrink: 0
+    box-shadow: none
+
+  input.group-name:focus
+    box-shadow: none
+    outline-width: 0
+
+@media screen and (min-width: 1200px)
+  .group-create
+    max-width: 360px
+    min-width: 360px
+
+@media screen and (min-width: 700px) and (max-width: 1199px)
+  .group-create
+    max-width: 300px
+    min-width: 300px
+
+@media screen and (max-width: 699px)
+  .group-create
+    width: 100%
+
+.theme.light .group-create
+  background: #0047AB
+  color: #ffffff
+
+.theme.dark .group-create
+  background: #303841
+  color: #ffffff
+
+.active
+  color: #da7d02 !important
+  font-weight: 700
+
+.selection-text
+  text-align: center
+  padding: 12px
+  font-size: 14px
+  background: #f7f7f8
+  color: #666
+
+.selection-text.error
+  color: #DA7D02
+
+.create-button
+  background: #DA7D02
+  width: 100%
+  padding: 10px 0
+  border-radius: 6px
+  font-weight: 600
+  cursor: pointer
+  transition: all 0.3s ease
+  color: #ffffff
+
+  &:hover
+    background: #da7d02
+    opacity: 0.9
+  height: 100%
+  flex-grow: 1
+  border-right: 1px solid #0047AB
+  display: flex
+  flex-direction: column
+  background: #0047AB
+  color: #ffffff
+
+  .picture
+    left: 50%
     -webkit-transform: translate(-50%, 0)
     -ms-transform: translate(-50%, 0)
     transform: translate(-50%, 0)
