@@ -1,12 +1,12 @@
 $nav-width: 96px
 $main-color: #ff0000
-$nav-background: #0047AB
-$panel-background: #0047AB
+$nav-background: #3A75C4
+$panel-background: #3A75C4
 
 .details-room
   height: 100%
   min-width: 280px
-  background: #0047AB
+  background: $panel-background
   display: flex
   flex-direction: column
   align-items: center
@@ -25,16 +25,16 @@ $panel-background: #0047AB
     overflow: hidden
     flex-shrink: 0
 
-  .profile .img
-    width: 200px
-    height: 200px
-    border-radius: 100px
-    display: flex
-    justify-content: center
-    align-items: center
-    background: $nav-background
-    color: #ffffff
-    font-size: 80px
+    .img
+      width: 200px
+      height: 200px
+      border-radius: 100px
+      display: flex
+      justify-content: center
+      align-items: center
+      background: $nav-background
+      color: #ffffff
+      font-size: 80px
 
   .name
     text-align: center
@@ -44,27 +44,100 @@ $panel-background: #0047AB
   .title
     text-align: center
     font-size: 14px
-    color: #ffffff
+    color: #e6edff
 
   .notice-text
     text-align: center
     font-size: 14px
-    padding-top: 12px
-    color: #ffffff
-    padding: 20px 20px
+    padding: 20px
+    color: #e6edff
 
   .images
     display: flex
     flex-direction: column
     flex-shrink: 1
     margin: 2px 0
-    overflow-y: scroll
+    overflow-y: auto
     overflow-x: hidden
     scrollbar-width: none
 
     .row
       display: flex
       flex-direction: row
+      min-height: 149px
+
+      img:first-child
+        margin-left: 2px
+        margin-right: 1px
+
+      img
+        width: 147px
+        height: 147px
+        object-fit: cover
+        margin: 1px 2px 2px 1px
+        border-radius: 6px
+        cursor: pointer
+        transition: transform 0.2s ease
+
+        &:hover
+          transform: scale(1.03)
+
+  .images::-webkit-scrollbar
+    display: none
+
+.members
+  display: flex
+  flex-direction: column
+  background: #e6edff
+  color: #003c91
+  width: 100%
+  height: 100%
+  padding-right: 20px
+  overflow-x: hidden
+  overflow-y: auto
+
+  .member
+    display: flex
+    align-items: center
+    height: 54px
+    border-bottom: 1px solid rgba(0, 71, 171, 0.2)
+    font-size: 14px
+    transition: background 0.2s ease
+
+    &:hover
+      background: rgba(0, 71, 171, 0.08)
+
+    img
+      width: 40px
+      height: 40px
+      border-radius: 20px
+      margin: 7px 14px 7px 16px
+
+    .img
+      width: 40px
+      height: 40px
+      border-radius: 20px
+      display: flex
+      justify-content: center
+      align-items: center
+      background: $nav-background
+      color: #ffffff
+      margin: 7px 14px 7px 16px
+
+    .text
+      flex-grow: 1
+
+  .online
+    color: #55d48b
+
+  .away
+    color: #ffb84d
+
+  .busy
+    color: #d61314
+
+  .offline
+    color: #99a6bf      flex-direction: row
       min-height: 149px
 
       img:first-child
