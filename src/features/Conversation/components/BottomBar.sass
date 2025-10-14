@@ -1,10 +1,15 @@
+// --- BOTTOM BAR ---
 .bottom-bar-conversation
   width: 100%
   min-height: 54px
   max-height: 54px
-  border-top: 1px solid #ffffff
-  background: #0047AB
+  border-top: 1px solid rgba(255, 255, 255, 0.3)
+  background: linear-gradient(90deg, #0047AB, #005FD1)
   color: #ffffff
+  display: flex
+  align-items: center
+  padding: 0 10px
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1)
 
   .profile
     overflow: hidden
@@ -12,48 +17,46 @@
     height: 40px
     border-radius: 20px
     margin: 7px 12px
-
-  .nav
-    display: flex
-    padding-right: 9px
-
-    .button
-      color: #ffffff
-      font-size: 13px
-      padding: 9px
-      cursor: pointer
-
-      &:hover
-        color: #f0f0f0
+    background-color: rgba(255, 255, 255, 0.15)
 
   > input.search-input
     flex-grow: 1
-    width: calc(100% - 87px)
     height: 40px
     font-size: 14px
-    padding: 0 8px
+    padding: 0 10px
     border: none
     background-color: #ffffff
     color: #0047AB
     border-radius: 6px
     outline: none
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+    transition: all 0.2s ease
 
-  .button
-    width: 36px
-    height: 36px
-    margin: 0 13px
-    font-size: 24px
+    &:focus
+      box-shadow: 0 0 6px rgba(0, 71, 171, 0.4)
+
+  .nav
     display: flex
-    justify-content: center
-    align-items: center
-    cursor: pointer
-    background-color: #ffffff
-    color: #0047AB
-    border-radius: 6px
+    padding-right: 9px
+    gap: 6px
 
-    &:hover
-      background-color: #003a91
-      color: #ffffff
+    .button
+      width: 36px
+      height: 36px
+      font-size: 20px
+      display: flex
+      justify-content: center
+      align-items: center
+      cursor: pointer
+      background-color: #ffffff
+      color: #0047AB
+      border-radius: 6px
+      transition: all 0.3s ease
+
+      &:hover
+        background-color: #005FD1
+        color: #ffffff
+        transform: scale(1.05)
 
   .smile
     margin-right: 6px
@@ -64,14 +67,29 @@
   .attach
     margin-left: 6px
 
+// Emoji Picker Overrides
 .picker
   position: relative
-  width: 0
-  height: 0
   bottom: 451px
   left: 0
+  width: 0
+  height: 0
 
 .emoji-mart
+  border: none !important
+  border-radius: 0 !important
+
+.emoji-mart-preview-shortnames,
+.emoji-mart-preview-emoticons
+  display: none !important
+
+.file-input
+  visibility: hidden
+  width: 0
+  height: 0
+  flex-grow: 0 !important
+  padding: 0 !important
+  margin: 0 !important.emoji-mart
   border: none !important
   border-radius: 0 !important
 
