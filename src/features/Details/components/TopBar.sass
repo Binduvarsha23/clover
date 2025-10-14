@@ -1,24 +1,40 @@
 .top-bar
   width: 100%
   height: 54px
-  border-bottom: 1px solid rgba(218, 220, 224, 0.5)
+  display: flex
+  align-items: center
+  justify-content: space-between
   background: #0047AB
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+  padding: 0 12px
+  color: #ffffff
+
   .profile
     overflow: hidden
     width: 40px
     height: 40px
-    border-radius: 20px
+    border-radius: 50%
     margin: 7px 12px
+    border: 2px solid #ffffff
+
   .nav
     display: flex
-    padding: 0 9px
+    align-items: center
+    gap: 12px
+
     .button
-      color: #666
+      color: #ffffff
       font-size: 18px
       padding: 9px
       cursor: pointer
-    .button:hover
-      color: #000
+      transition: color 0.3s ease
+
+      &:hover
+        color: #cfe0ff
+
+  .mobile
+    display: flex
+    align-items: center
 
 @media screen and (min-width: 700px)
   .mobile
