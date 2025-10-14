@@ -1,17 +1,16 @@
 $nav-width: 96px
 $main-color: #ff0000
-$nav-background: #3A75C4
-$panel-background: #3A75C4
+$nav-background: #303841
+$panel-background: #363e47
 
 .details-room
   height: 100%
   min-width: 280px
-  background: $panel-background
+  background: #fcffff
   display: flex
   flex-direction: column
   align-items: center
   overflow: hidden
-  color: #ffffff
 
   .details-button
     min-height: 40px
@@ -25,16 +24,16 @@ $panel-background: #3A75C4
     overflow: hidden
     flex-shrink: 0
 
-    .img
-      width: 200px
-      height: 200px
-      border-radius: 100px
-      display: flex
-      justify-content: center
-      align-items: center
-      background: $nav-background
-      color: #ffffff
-      font-size: 80px
+  .profile .img
+    width: 200px
+    height: 200px
+    border-radius: 100px
+    display: flex
+    justify-content: center
+    align-items: center
+    background: $nav-background
+    color: #f7f7f8
+    font-size: 80px
 
   .name
     text-align: center
@@ -44,20 +43,19 @@ $panel-background: #3A75C4
   .title
     text-align: center
     font-size: 14px
-    color: #e6edff
 
   .notice-text
     text-align: center
     font-size: 14px
-    padding: 20px
-    color: #e6edff
+    padding-top: 12px
+    color: $panel-background
 
   .images
     display: flex
     flex-direction: column
     flex-shrink: 1
-    margin: 2px 0
-    overflow-y: auto
+    margin: 2px 0 2px 0
+    overflow-y: scroll
     overflow-x: hidden
     scrollbar-width: none
 
@@ -67,250 +65,6 @@ $panel-background: #3A75C4
       min-height: 149px
 
       img:first-child
-        margin-left: 2px
-        margin-right: 1px
-
-      img
-        width: 147px
-        height: 147px
-        object-fit: cover
-        margin: 1px 2px 2px 1px
-        border-radius: 6px
-        cursor: pointer
-        transition: transform 0.2s ease
-
-        &:hover
-          transform: scale(1.03)
-
-  .images::-webkit-scrollbar
-    display: none
-
-.members
-  display: flex
-  flex-direction: column
-  background: #0047AB
-  color: #ffffff
-  width: 100%
-  height: 100%
-  padding-right: 20px
-  overflow-x: hidden
-  overflow-y: scroll
-
-  .member
-    display: flex
-    align-items: center
-    height: 54px
-    border-bottom: 1px solid rgba(255,255,255,0.2)
-    font-size: 14px
-    color: #ffffff
-
-    img
-      width: 40px
-      height: 40px
-      border-radius: 20px
-      margin: 7px 14px 7px 16px
-
-    .img
-      width: 40px
-      height: 40px
-      border-radius: 20px
-      display: flex
-      justify-content: center
-      align-items: center
-      background: $nav-background
-      color: #ffffff
-      margin: 7px 14px 7px 16px
-
-    .text
-      flex-grow: 1
-
-  .online
-    color: #55d48b
-
-  .away
-    color: #ffa500
-
-  .busy
-    color: #d61314
-
-  .offline
-    color: #cccccc
-
-  .notice-text
-    padding: 20px
-
-  .images
-    display: flex
-    flex-direction: column
-    margin-top: 8px
-    overflow-y: auto
-
-    .row
-      display: flex
-      flex-direction: row
-      min-height: 149px
-
-      img:first-child
-        margin-left: 2px
-        margin-right: 1px
-
-      img
-        width: 147px
-        height: 147px
-        object-fit: cover
-        margin: 1px 2px 2px 1px
-        border-radius: 6px
-        cursor: pointer
-        transition: transform 0.2s ease
-
-        &:hover
-          transform: scale(1.03)
-
-.images::-webkit-scrollbar
-  display: none      
-  min-height: 149px
-
-    img:first-child
-      margin-left: 2px
-      margin-right: 1px
-
-    img
-      width: 147px
-      height: 147px
-      object-fit: cover
-      margin: 1px 2px 2px 1px
-      border-radius: 6px
-      cursor: pointer
-      transition: transform 0.2s ease
-
-      &:hover
-        transform: scale(1.03)
-
-  .images::-webkit-scrollbar
-    display: none
-
-.members
-  display: flex
-  flex-direction: column
-  background: #e6edff
-  color: #003c91
-  width: 100%
-  height: 100%
-  padding-right: 20px
-  overflow-x: hidden
-  overflow-y: auto
-
-  .member
-    display: flex
-    align-items: center
-    height: 54px
-    border-bottom: 1px solid rgba(0, 71, 171, 0.2)
-    font-size: 14px
-    transition: background 0.2s ease
-
-    &:hover
-      background: rgba(0, 71, 171, 0.08)
-
-    img
-      width: 40px
-      height: 40px
-      border-radius: 20px
-      margin: 7px 14px 7px 16px
-
-    .img
-      width: 40px
-      height: 40px
-      border-radius: 20px
-      display: flex
-      justify-content: center
-      align-items: center
-      background: $nav-background
-      color: #ffffff
-      margin: 7px 14px 7px 16px
-
-    .text
-      flex-grow: 1
-
-  .online
-    color: #55d48b
-
-  .away
-    color: #ffb84d
-
-  .busy
-    color: #d61314
-
-  .offline
-    color: #99a6bf      
-    flex-direction: row
-      min-height: 149px
-
-      img:first-child
-        margin-left: 2px
-        margin-right: 1px
-
-      img
-        width: 147px
-        min-height: 147px
-        max-height: 147px
-        height: 147px
-        object-fit: cover
-        margin-left: 1px
-        margin-right: 2px
-        margin-bottom: 2px
-        cursor: pointer
-
-  .images::-webkit-scrollbar
-    display: none
-
-.members
-  display: flex
-  flex-direction: column
-  background: #0047AB
-  color: #ffffff
-  width: 100%
-  height: 100%
-  padding-right: 20px
-  overflow-x: hidden
-  overflow-y: scroll
-
-  .member
-    display: flex
-    align-items: center
-    height: 54px
-    border-bottom: 1px solid rgba(255,255,255,0.2)
-    font-size: 14px
-    color: #ffffff
-
-    img
-      width: 40px
-      height: 40px
-      border-radius: 20px
-      margin: 7px 14px 7px 16px
-
-    .img
-      width: 40px
-      height: 40px
-      border-radius: 20px
-      display: flex
-      justify-content: center
-      align-items: center
-      background: $nav-background
-      color: #ffffff
-      margin: 7px 14px 7px 16px
-
-    .text
-      flex-grow: 1
-
-  .online
-    color: #55d48b
-  .away
-    color: #ffa500
-  .busy
-    color: #d61314
-  .offline
-    color: #cccccc      
-    img:first-child
         margin-left: 2px
         margin-right: 1px
 
@@ -377,3 +131,4 @@ $panel-background: #3A75C4
     color: #d61314
   .offline
     color: gray
+
