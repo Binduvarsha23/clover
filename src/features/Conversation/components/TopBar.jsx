@@ -65,7 +65,8 @@ function TopBar({ back, loading }) {
   };
 
   const call = async (isVideo) => {
-    if (onlineUsers.filter((u) => u.id === other._id).length === 0 && !room.isGroup) return warningToast("Can't call user because user is offline");
+    if (onlineUsers.filter((u) => u.id === other._id).length === 0 && !room.isGroup)
+      return warningToast("Can't call user because user is offline");
     await setAudio(true);
     await setVideo(isVideo);
     await setCallDirection('outgoing');
@@ -109,22 +110,29 @@ function TopBar({ back, loading }) {
     const [lastOnline, setLastOnline] = useState(null);
 
     useEffect(() => {
-      if (prevStatusRef.current && onlineUsers.filter((u) => u.id === other._id).length === 0) setLastOnline(moment().valueOf());
+      if (prevStatusRef.current && onlineUsers.filter((u) => u.id === other._id).length === 0)
+        setLastOnline(moment().valueOf());
       prevStatusRef.current = onlineUsers.filter((u) => u.id === other._id).length > 0;
     }, [onlineUsers, other]);
 
-    if (onlineUsers.filter((u) => u.id === other._id && u.status === 'busy').length > 0) return 'busy';
-    if (onlineUsers.filter((u) => u.id === other._id && u.status === 'online').length > 0) return 'online';
-    if (onlineUsers.filter((u) => u.id === other._id && u.status === 'away').length > 0) return 'away';
+    if (onlineUsers.filter((u) => u.id === other._id && u.status === 'busy').length > 0)
+      return 'busy';
+    if (onlineUsers.filter((u) => u.id === other._id && u.status === 'online').length > 0)
+      return 'online';
+    if (onlineUsers.filter((u) => u.id === other._id && u.status === 'away').length > 0)
+      return 'away';
     if (lastOnline) return `Last online: ${moment(lastOnline).fromNow()}`;
     return `Last online: ${other.lastOnline ? moment(other.lastOnline).fromNow() : 'Never'}`;
   };
 
   const getStatus = () => {
     if (room.isGroup) return null;
-    if (onlineUsers.filter((u) => u.id === other._id && u.status === 'busy').length > 0) return 'busy';
-    if (onlineUsers.filter((u) => u.id === other._id && u.status === 'online').length > 0) return 'online';
-    if (onlineUsers.filter((u) => u.id === other._id && u.status === 'away').length > 0) return 'away';
+    if (onlineUsers.filter((u) => u.id === other._id && u.status === 'busy').length > 0)
+      return 'busy';
+    if (onlineUsers.filter((u) => u.id === other._id && u.status === 'online').length > 0)
+      return 'online';
+    if (onlineUsers.filter((u) => u.id === other._id && u.status === 'away').length > 0)
+      return 'away';
     return null;
   };
 
@@ -161,9 +169,19 @@ function TopBar({ back, loading }) {
         <div className="button" onClick={() => call(false)}>
           <FiPhone />
         </div>
-        <div className={`button${isFavorite() ? ' active' : ''}`} onClick={favorite}>
-          <FiStar />
+
+        {/* ✅ Cobalt blue outlined star when active */}
+        <div
+          className={`button${isFavorite() ? ' active' : ''}`}
+          onClick={favorite}
+        >
+          <FiStar
+            stroke={isFavorite() ? '#0047AB' : '#888'}
+            strokeWidth={2.5}
+            fill="none"
+          />
         </div>
+
         <div className="uk-inline">
           <div className="button" type="button">
             <FiMoreHorizontal />
