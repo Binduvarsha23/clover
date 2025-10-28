@@ -7,20 +7,18 @@ import {
 function NavBar() {
   const [nav, setNav] = useGlobal('nav');
 
-  const getItemStyle = (key) => ({
-    color: nav === key ? 'black' : '#888',
-    cursor: 'pointer',
-  });
+  const activeColor = 'black';
+  const inactiveColor = '#888';
 
   return (
     <div className="nav-bar uk-flex">
       <div
         className={`item${nav === 'rooms' ? ' active' : ''}`}
         onClick={() => setNav('rooms')}
-        style={getItemStyle('rooms')}
+        style={{ color: nav === 'rooms' ? activeColor : inactiveColor, cursor: 'pointer' }}
       >
         <div className="icon">
-          <FiMessageCircle />
+          <FiMessageCircle color={nav === 'rooms' ? activeColor : inactiveColor} />
         </div>
         <div className="text">Rooms</div>
       </div>
@@ -28,10 +26,10 @@ function NavBar() {
       <div
         className={`item${nav === 'search' ? ' active' : ''}`}
         onClick={() => setNav('search')}
-        style={getItemStyle('search')}
+        style={{ color: nav === 'search' ? activeColor : inactiveColor, cursor: 'pointer' }}
       >
         <div className="icon">
-          <FiSearch />
+          <FiSearch color={nav === 'search' ? activeColor : inactiveColor} />
         </div>
         <div className="text">Search</div>
       </div>
@@ -39,10 +37,10 @@ function NavBar() {
       <div
         className={`item${nav === 'favorites' ? ' active' : ''}`}
         onClick={() => setNav('favorites')}
-        style={getItemStyle('favorites')}
+        style={{ color: nav === 'favorites' ? activeColor : inactiveColor, cursor: 'pointer' }}
       >
         <div className="icon">
-          <FiStar />
+          <FiStar color={nav === 'favorites' ? activeColor : inactiveColor} />
         </div>
         <div className="text">Favorites</div>
       </div>
@@ -50,10 +48,10 @@ function NavBar() {
       <div
         className={`item${nav === 'meetings' ? ' active' : ''}`}
         onClick={() => setNav('meetings')}
-        style={getItemStyle('meetings')}
+        style={{ color: nav === 'meetings' ? activeColor : inactiveColor, cursor: 'pointer' }}
       >
         <div className="icon">
-          <FiUsers />
+          <FiUsers color={nav === 'meetings' ? activeColor : inactiveColor} />
         </div>
         <div className="text">Meetings</div>
       </div>
