@@ -13,15 +13,16 @@ function Welcome() {
     <div className="content uk-flex uk-flex-column">
       <TopBar back={back} />
       <div className="content uk-flex uk-flex-center uk-flex-middle uk-flex-column">
-        <div className="welcome uk-flex uk-flex-bottom">
-          {user.firstName}
-          {' '}
-          {user.lastName}
+        <div className="welcome uk-flex uk-flex-bottom" style={{ color: 'black' }}>
+          {user.firstName} {user.lastName}
         </div>
         <div className="profile">
           <Picture user={user} />
         </div>
-        <div className="tutorial uk-flex uk-flex-top uk-flex-column uk-flex-center uk-flex-middle">
+        <div
+          className="tutorial uk-flex uk-flex-top uk-flex-column uk-flex-center uk-flex-middle"
+          style={{ color: 'black' }}
+        >
           Search for someone to start a conversation,
           <br />
           Add contacts to your favorites to reach them faster
