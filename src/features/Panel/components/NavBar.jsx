@@ -7,7 +7,7 @@ import {
 function NavBar() {
   const [nav, setNav] = useGlobal('nav');
 
-  const activeColor = 'black';
+  const activeColor = '#0047AB'; // cobalt blue
   const inactiveColor = '#888';
 
   return (
@@ -18,7 +18,7 @@ function NavBar() {
         style={{ color: nav === 'rooms' ? activeColor : inactiveColor, cursor: 'pointer' }}
       >
         <div className="icon">
-          <FiMessageCircle color={nav === 'rooms' ? activeColor : inactiveColor} />
+          <FiMessageCircle stroke={nav === 'rooms' ? activeColor : inactiveColor} />
         </div>
         <div className="text">Rooms</div>
       </div>
@@ -29,7 +29,7 @@ function NavBar() {
         style={{ color: nav === 'search' ? activeColor : inactiveColor, cursor: 'pointer' }}
       >
         <div className="icon">
-          <FiSearch color={nav === 'search' ? activeColor : inactiveColor} />
+          <FiSearch stroke={nav === 'search' ? activeColor : inactiveColor} />
         </div>
         <div className="text">Search</div>
       </div>
@@ -40,7 +40,11 @@ function NavBar() {
         style={{ color: nav === 'favorites' ? activeColor : inactiveColor, cursor: 'pointer' }}
       >
         <div className="icon">
-          <FiStar color={nav === 'favorites' ? activeColor : inactiveColor} />
+          <FiStar
+            stroke={nav === 'favorites' ? activeColor : inactiveColor}
+            strokeWidth={2.5}
+            fill="none"
+          />
         </div>
         <div className="text">Favorites</div>
       </div>
@@ -51,7 +55,7 @@ function NavBar() {
         style={{ color: nav === 'meetings' ? activeColor : inactiveColor, cursor: 'pointer' }}
       >
         <div className="icon">
-          <FiUsers color={nav === 'meetings' ? activeColor : inactiveColor} />
+          <FiUsers stroke={nav === 'meetings' ? activeColor : inactiveColor} />
         </div>
         <div className="text">Meetings</div>
       </div>
